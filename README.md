@@ -29,7 +29,7 @@ nvidia-persistenced &
 
 >*nvidia-smi -i 0* set *-i* to the number of your passed through gpu, this can be found running *nvidia-smi*
 
->*((i=8;i<12;i++));* set these to your cores you have isolated for the vm.
+>*((i=6;i<12;i++));* set these to your cores you have isolated for the vm.
 
 In my case, it is cores 6-11, with the hyper threaded cores 18-23
 
