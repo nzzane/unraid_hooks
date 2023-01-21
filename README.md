@@ -5,6 +5,9 @@ These hook files run before or after a VM start
 ## Unraid nvidia-persistenced
 These scripts will turn your isolated cpu cores into powersave when the vm is turned off, and before turning it on, it will put them into ondemand scaler.  This will also turn off/on nvidia-persistenced on the selected card, whith newer GPU's, this can save around 20-30W when not in use.
 
+** The GPU has to be in the unraid system, and not passed through in an IOMMU group**
+You can still pass this through to a vm, and unraid will release the card as long as it's not currently being used for another vm or docker.
+
 1. Add the following to your */boot/config/go* file to start nvidia-persistenced on boot
 ```
 # set Nvidia Persistent
